@@ -1,0 +1,45 @@
+@import "../../common/variable.scss";
+.footerNavigationMenus {
+  background-color: #FFEDDC;
+  // padding: 32px 43px;
+
+  .heading {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 25.6px;
+    letter-spacing: 0.02em;
+    color: $text-navyBlue;
+    margin-bottom: 20px;
+  }
+
+  .addressBox {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 26.4px;
+    text-align: left;
+    color: $text-black;
+  }
+
+  .footerLinks {
+    a {
+      display: flex;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 28.8px;
+      text-align: left;
+      color: $text-black;
+    }
+  }
+
+  .footerNote {
+    border-top: 1px solid #E0BFAC;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 26.4px;
+    text-align: left;
+  }
+}

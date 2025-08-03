@@ -1,0 +1,139 @@
+@import "../common/variable.scss";
+
+.sustainableDevelopmentGoal {
+  background: linear-gradient(180deg, #FAFAFA 0%, #FFEEE2 100%);
+
+  .sustainableDevelopmentGoalInnerBox {
+    .heading {
+      font-family: Merriweather;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 30.17px;
+      text-align: left;
+      color: $text-navyBlue;
+      margin-bottom: 0.5rem;
+    }
+
+    .subTitle {
+      font-family: Montserrat;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 21.6px;
+      text-align: center;
+      color: $text-black;
+      margin-bottom: 1.5rem;
+    }
+
+    .sustainableDevelopmentGoalsCard {
+      border-radius: 0 30px 0 30px;
+
+      .cardText {
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 19.2px;
+        border-bottom: 1px solid $black;
+        padding: 12px 12px;
+        flex: 1;
+      }
+
+      .goalInfoBox {
+        padding: 12px 12px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex:1;
+
+        .count {
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 22.4px;
+          text-align: justify;
+        }
+
+        .label {
+          font-family: Montserrat;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 19.2px;
+          text-align: justify;
+        }
+
+        .viewMoreLink {
+          color: $text-orange;
+          padding: 0;
+        }
+      }
+
+      .goalType {
+        position: relative;
+
+        .goalTypeBox {
+          .goalInfo {
+            position: absolute;
+            left: 10px;
+            bottom: 22px;
+            color: $text-white;
+
+            .cardTitle {
+              font-family: Montserrat;
+              font-size: 14px;
+              font-weight: 700;
+              line-height: 1;
+              text-align: justify;
+              color: $text-white;
+              margin-bottom: 4px;
+            }
+          }
+        }
+
+        .goalTypeNumber {
+          background-color: $text-navyBlue;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+        }
+
+        .goalName {
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: 800;
+          line-height: 19.2px;
+          text-align: left;
+          margin-left: 10px;
+          text-transform: uppercase;
+          flex: 1;
+          // max-width: 80px;
+        }
+      }
+
+      .cardBody {
+        padding: 32px 24px;
+
+        .count {
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 22.4px;
+          text-align: justify;
+        }
+
+        .label {
+          font-family: Montserrat;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 19.2px;
+          text-align: justify;
+        }
+
+        .viewMoreLink {
+          color: $text-orange;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

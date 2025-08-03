@@ -1,0 +1,141 @@
+@import "../../common/variable.scss";
+
+.beforeLoginHeader {
+  position: relative;
+
+  .topHeader {
+    min-width: 437px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.63px;
+    text-align: left;
+    color: $text-black;
+    padding: 0 15px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 1;
+
+    @media (max-width:991px) {
+      min-width: auto;
+      position: relative;
+      line-height: 40px;
+      top: 0;
+      background-color: #ddd;
+    }
+
+    @media (max-width:767px) {
+      line-height: 30px;
+    }
+
+    .changeLanguageOpt {
+      @media (max-width:767px) {
+        margin: 0 auto;
+        text-align: center;
+        justify-content: space-between !important;
+        padding: 0;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+
+        >div {
+          border-left: none;
+        }
+
+        select {
+          background-color: transparent;
+          padding: 0;
+          border: 0;
+          line-height: 1;
+          min-width: 100px;
+          font-family: Montserrat;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 14.63px;
+          text-align: left;
+          color: $text-black;
+        }
+      }
+    }
+
+    div {
+      border-left: 1px solid #212121;
+      padding: 0 0.5rem;
+      text-wrap: nowrap;
+
+      &:first-child {
+        border-left: none;
+
+        @media (max-width:991px) {
+          margin-left: 2rem;
+        }
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      @media (max-width:767px) {
+        flex-wrap: wrap;
+        border-left: none;
+      }
+    }
+  }
+
+  .navbar {
+    background-color: $bg-white;
+  }
+
+  .dropDownMenu {
+    .menuLink {
+      font-family: Montserrat;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14.63px;
+      text-align: left;
+      color: $text-black;
+      border-left: 1px solid $black;
+      padding: 0 15px;
+
+      @media (max-width:1024px) {
+        font-size: 10px;
+        padding: 0 15px;
+      }
+
+      @media (max-width:991px) {
+        border-left: none;
+        border-bottom: 1px solid $black;
+        padding: 8px;
+      }
+
+      &:first-child {
+        border-left: none;
+
+        @media (max-width:991px) {
+          border-top: 1px solid $black;
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $text-orange !important;
+      }
+    }
+  }
+
+  .textSize {
+    a {
+      color: $text-black;
+      text-decoration: none;
+      text-align: center;
+      padding: 0 4px;
+      width: 24px;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+}
