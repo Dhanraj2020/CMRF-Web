@@ -1,0 +1,12 @@
+@import "../../components/common/variable.scss";
+
+.applicationEnquirySection {
+  .applicationForm {
+    max-width: 465px;
+    margin: 74px auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 28px 8px #726AA214;
+    padding: 20px 32px;
+  }
+}

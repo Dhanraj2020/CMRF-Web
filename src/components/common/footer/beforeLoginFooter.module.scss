@@ -1,0 +1,30 @@
+@import "../../common/variable.scss";
+
+.footerNavigationMenus {
+  background-color: $blue;
+
+  .footerLinks {
+    a {
+      display: flex;
+      font-family: Open Sans;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $text-white;
+      text-decoration: none;
+      padding: 0 1rem;
+
+      &:not(:first-child) {
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+
+  .footerNote {
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $text-white;
+  }
+}
