@@ -1,7 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
-import CarouselImages from './carouselImages';
-import { Button } from 'react-bootstrap';
 import styles from "./topCarousel.module.scss";
+import { Col, Container, Row } from 'react-bootstrap';
 
 const TopCarousel = () => {
   return (
@@ -9,7 +8,7 @@ const TopCarousel = () => {
       <Carousel className={styles.topCarousel + " " + "topCarousel"}>
         <Carousel.Item>
           <div>
-            <img src="/assets/images/home/carouselImage1.svg" alt="carousel-img1" className="img-fluid d-block w-100" />
+            <img src="/assets/images/home/carouselImage.svg" alt="carousel-img1" className="img-fluid d-block w-100" />
           </div>
           {/*  <Carousel.Caption className={styles.carouselCaption}>
             <h3>Our Mission</h3>
@@ -21,21 +20,31 @@ const TopCarousel = () => {
         </Carousel.Item>
         <Carousel.Item>
           <div>
-            <img src="/assets/images/home/carouselImage2.svg" alt="carousel-img2" className="img-fluid d-block w-100" />
+            <img src="/assets/images/home/carouselImage.svg" alt="carousel-img2" className="img-fluid d-block w-100" />
           </div>
-          <Carousel.Caption className={styles.carouselCaption}>
-          </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
           <div>
-            <img src="/assets/images/home/carouselImage3.svg" alt="carousel-img3" className="img-fluid d-block w-100" />
+            <img src="/assets/images/home/carouselImage.svg" alt="carousel-img3" className="img-fluid d-block w-100" />
           </div>
-          <Carousel.Caption className={styles.carouselCaption}>
-          </Carousel.Caption>
         </Carousel.Item>
-
       </Carousel >
+      <Container fluid>
+        <Row>
+          <Col className="px-0">
+            <div className={styles.newsTicker}>
+              <div className={styles.newsLabel}>What's New</div>
+              <div className={styles.marqueeWrapper}>
+                <div className={styles.marqueeText}>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s...
+                </div>
+              </div>
+            </div>
+          </Col>
+        </Row>
+
+      </Container>
     </>
   );
 }
