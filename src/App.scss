@@ -1,4 +1,5 @@
 // @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -15,25 +16,18 @@ body {
   background: #fff;
 }
 
-.merriweather-regular {
-  font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.montserrat-regular {
-  font-family: "Montserrat", sans-serif;
+.open-sans-regular {
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.ms-auto {
-  margin-left: auto;
-}
-
-.text-end {
-  text-align: right;
+.oswald-regular {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .btnOrange {
@@ -44,15 +38,43 @@ body {
   text-align: left;
   background-color: $bg-orange;
   color: $text-white;
-  border-radius: 28px;
-  padding: 11px 12px;
-  min-width: 100px;
+  border-radius: 12px;
+  padding: 20px 12px;
+  min-width: 215px;
   text-align: center;
   text-transform: uppercase;
 }
 
+.eventCarousel .carousel-inner {
+  border-radius: 12px;
+}
+
+.eventCarousel .carousel-control-prev,
+.eventCarousel .carousel-control-next {
+  filter: brightness(0);
+  width: auto;
+}
+
+.eventCarousel .carousel-control-next-icon,
+.eventCarousel .carousel-control-prev-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.eventCarousel .carousel-control-prev {
+  left: -24px;
+}
+
+.eventCarousel .carousel-control-next {
+  right: -24px;
+}
+
 .visually-hidden {
   visibility: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .carousel-control-next-icon,
@@ -81,8 +103,8 @@ body {
   .slick-slide {
     height: inherit !important;
     display: flex !important;
-    // justify-content: center;
-    // align-items: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .slick-prev:before,
@@ -96,7 +118,7 @@ body {
   }
 
   .slick-disabled {
-    opacity: 0;
+    opacity: 0.5;
   }
 }
 
@@ -122,71 +144,12 @@ body {
   border-radius: 50%;
 }
 
-.operatingCard {
-  &.card1 {
-    background: linear-gradient(180deg, #94FFE4 0%, #F2FFFC 100%);
-  }
-
-  &.card2 {
-    background: linear-gradient(180deg, #FCD4A7 0%, #FFF6EC 100%);
-  }
-
-  &.card3 {
-    background: linear-gradient(180deg, #FCAD90 0%, #FFEFEA 100%);
-  }
-
-  &.card4 {
-    background: linear-gradient(180deg, #7DDBFF 0%, #D6F3FF 100%);
-  }
-}
-
-.sustainableDevelopmetGoalCard {
-  &.goalCard1 {
-    background-color: #FFE7EA;
-  }
-
-  &.goalCard2 {
-    background-color: #FFF5E0;
-  }
-
-  &.goalCard3 {
-    background-color: #E2FFE0;
-  }
-
-  &.goalCard4 {
-    background-color: #FFF8F8;
-  }
-
-  &.goalCard5 {
-    background-color: #FFF2F0;
-  }
-
-  &.goalCard6 {
-    background-color: #FFF8E1;
-  }
-
-  &.goalCard7 {
-    background-color: #FFF0E9;
-  }
-
-  &.goalCard8 {
-    background-color: #FFEAF5;
-  }
-
-  &.goalCard9 {
-    background-color: #EEF9FF;
-  }
-
-  &.goalCard10 {
-    background-color: #F3FFF1;
-  }
-}
 
 .topHeaderOffcanvasMenus .nav-link {
   &.active {
-    color: $text-orange !important;
+    background-color: $text-orange !important;
   }
- 
+
   @media (max-width:991px) {
     padding: 1rem;
     border-bottom: 1px solid #ddd;
