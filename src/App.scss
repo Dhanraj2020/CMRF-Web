@@ -31,10 +31,10 @@ body {
 }
 
 .btnOrange {
-  font-family: Montserrat;
+  font-family: "Open Sans";
   font-size: 12px;
   font-weight: 600;
-  line-height: 14.63px;
+  line-height: 1;
   text-align: left;
   background-color: $bg-orange;
   color: $text-white;
@@ -43,6 +43,34 @@ body {
   min-width: 215px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.btnBlue {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: left;
+  background-color: $bg-blue;
+  color: $text-white;
+  border-radius: 4px;
+  padding: 5px 11px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.toggleSwitchBtn {
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  .form-check-input {
+    margin-bottom: 8px;
+  }
+}
+
+.userIcon {
+  width: 24px;
+  height: 24px;
 }
 
 .eventCarousel .carousel-inner {
