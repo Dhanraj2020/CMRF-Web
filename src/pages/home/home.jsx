@@ -1,29 +1,18 @@
+import React, { memo } from "react"
 import AboutSection from "../../components/aboutSection/aboutSection"
 import TopCarousel from "../../components/common/carousel/carousel"
-import BeforeLoginFooter from "../../components/common/footer/beforeLoginFooter"
-import HeaderContainer from "../../components/common/header/headerContainer"
 import SchemeSlider from "../../components/common/schemeSilder/schemeSlider"
 import TopDonarSlider from "../../components/common/topDonarSilder/topDonarSlider"
 import QuickLinks from "../../components/quickLinks/quickLinks"
-import ApplicationEnquiryStatus from "../applicationEnquiryStatus/applicationEnquiryStatus"
-
 const Home = () => {
   return (
-    <div className="d-flex flex-column">
-      <HeaderContainer isLogin={false} />
-      <ApplicationEnquiryStatus />
-      <div className="pageContent">
-        <TopCarousel />
-        <TopDonarSlider />
-        <AboutSection />
-        <QuickLinks />
-        <SchemeSlider />
-      </div>
-      <div className="mt-auto">
-        <BeforeLoginFooter />
-      </div>
-    </div>
+    <React.Fragment>
+      <TopCarousel />
+      <TopDonarSlider />
+      <AboutSection />
+      <QuickLinks />
+      <SchemeSlider />
+    </React.Fragment>
   )
 }
-
-export default Home
+export default memo(Home)

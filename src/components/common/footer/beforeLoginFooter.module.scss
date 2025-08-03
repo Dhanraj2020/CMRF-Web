@@ -13,6 +13,7 @@
       color: $text-white;
       text-decoration: none;
       padding: 0 1rem;
+      pointer-events: none;
 
       &:not(:first-child) {
         border-left: 1px solid #fff;

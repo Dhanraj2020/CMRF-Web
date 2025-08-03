@@ -223,10 +223,15 @@
     }
 
     &:hover,
-    &:focus,
+    &:focus {
+      background-color: $text-orange !important;
+      color: $text-black;
+    }
+
     &.active {
       background-color: $text-orange !important;
       color: $text-black;
+      pointer-events: none;
     }
   }
 

@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Button, Container, Form, Nav, Navbar, Offcanvas } from 'react-bootstrap';
-import { SelectFieldMan } from '../../../common/selectFieldMan';
-import { LANGUAGES_OPTIONS } from '../constant.js';
-import { MenuItemWithKeyValueId } from '../menuItem.jsx';
 import styles from "./beforeLoginHeader.module.scss";
 const BeforeLoginHeader = () => {
   const [showOptions, setShowOptions] = useState(false);
   const handleToggle = () => {
     setShowOptions(prev => !prev);
   };
+  const location = useLocation();
+  const currentPath = location.pathname;
+  console.log({ currentPath })
+  const navMenuClassName = `${styles.menuLink}`;
   return (
     <div className={styles.beforeLoginHeader}>
       <div className={styles.topHeader + " " + "ms-auto"}>
@@ -102,23 +104,23 @@ const BeforeLoginHeader = () => {
             </Offcanvas.Header>
             <Offcanvas.Body className="p-0">
               <Nav className={styles.dropDownMenu + " " + "align-items-lg-center flex-grow-1"}>
-                <Nav.Link href="#home" active className={styles.menuLink}>Home</Nav.Link>
-                <Nav.Link href="#about" className={styles.menuLink}>Important<br />
+                <Nav.Link href="/" className={(currentPath === "/") ? `${navMenuClassName} active` : navMenuClassName} >Home</Nav.Link>
+                <Nav.Link href="about" className={navMenuClassName} style={{ pointerEvents: 'none' }}>Important<br />
                   Resolutions</Nav.Link>
-                <Nav.Link href="#programs" className={styles.menuLink}>Reports</Nav.Link>
-                <Nav.Link href="#stories" className={styles.menuLink}>Hospital</Nav.Link>
-                <Nav.Link href="#newsAndEvents" className={styles.menuLink}>RTI</Nav.Link>
-                <Nav.Link href="#getInvolved" className={styles.menuLink}>FAQ</Nav.Link>
-                <Nav.Link href="#contactUs" className={styles.menuLink}>Contact Us</Nav.Link>
-                <Nav.Link href="#criteriaAndEligibility" className={styles.menuLink}>Criteria and <br />Eligiblity</Nav.Link>
-                <Nav.Link href="#statusEnquiry" className={styles.menuLink}>Application <br />Status Enquiry
+                <Nav.Link href="#programs" className={navMenuClassName} style={{ pointerEvents: 'none' }}>Reports</Nav.Link>
+                <Nav.Link href="#stories" className={navMenuClassName} style={{ pointerEvents: 'none' }}>Hospital</Nav.Link>
+                <Nav.Link href="#newsAndEvents" className={navMenuClassName} style={{ pointerEvents: 'none' }}>RTI</Nav.Link>
+                <Nav.Link href="#getInvolved" className={navMenuClassName} style={{ pointerEvents: 'none' }}>FAQ</Nav.Link>
+                <Nav.Link href="#contactUs" className={navMenuClassName} style={{ pointerEvents: 'none' }}>Contact Us</Nav.Link>
+                <Nav.Link href="#criteriaAndEligibility" className={navMenuClassName} style={{ pointerEvents: 'none' }}>Criteria and <br />Eligiblity</Nav.Link>
+                <Nav.Link href="/application-status-enquiry" className={(currentPath === "/application-status-enquiry") ? `${navMenuClassName} active` : navMenuClassName}>Application <br />Status Enquiry
                 </Nav.Link>
               </Nav>
               <div className={styles.btnBox + " " + "d-flex ms-auto my-2 gap-3"}>
                 <a href="#" title="sitemap" target="_blank"><img src="/assets/images/sitemap-icon.svg" className="img-fluid" alt="sitemap" /></a>
                 <a href="#" title="sitemap" target="_blank"><img src="/assets/images/search-box-icon.svg" className="img-fluid" alt="sitemap" /></a>
-                <Button variant="warning" className={styles.topHeaderBtn + " " + "btnOrange"}>Donate Now</Button>
-                <Button variant="warning" className={styles.topHeaderBtn + " " + "btnOrange"}>Login <img src="/assets/images/user-icon.svg" className={styles.userIcon + " " + "img-fluid"} /></Button>
+                <Button variant="warning" className={styles.topHeaderBtn + " " + "btnOrange pe-none"}>Donate Now</Button>
+                <Button variant="warning" className={styles.topHeaderBtn + " " + "btnOrange pe-none"}>Login <img src="/assets/images/user-icon.svg" className={styles.userIcon + " " + "img-fluid"} /></Button>
               </div>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
