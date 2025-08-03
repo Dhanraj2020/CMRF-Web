@@ -5,11 +5,13 @@ import HeaderContainer from "../../components/common/header/headerContainer"
 import SchemeSlider from "../../components/common/schemeSilder/schemeSlider"
 import TopDonarSlider from "../../components/common/topDonarSilder/topDonarSlider"
 import QuickLinks from "../../components/quickLinks/quickLinks"
+import ApplicationEnquiryStatus from "../applicationEnquiryStatus/applicationEnquiryStatus"
 
 const Home = () => {
   return (
     <div className="d-flex flex-column">
       <HeaderContainer isLogin={false} />
+      <ApplicationEnquiryStatus />
       <div className="pageContent">
         <TopCarousel />
         <TopDonarSlider />

@@ -1,28 +1,68 @@
-import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, Container, Form, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { SelectFieldMan } from '../../../common/selectFieldMan';
 import { LANGUAGES_OPTIONS } from '../constant.js';
 import { MenuItemWithKeyValueId } from '../menuItem.jsx';
 import styles from "./beforeLoginHeader.module.scss";
 const BeforeLoginHeader = () => {
+  const [showOptions, setShowOptions] = useState(false);
+  const handleToggle = () => {
+    setShowOptions(prev => !prev);
+  };
   return (
     <div className={styles.beforeLoginHeader}>
       <div className={styles.topHeader + " " + "ms-auto"}>
-        <div className="d-flex justify-content-between align-items-center ms-auto my-2">
-          <div className="d-flex">
+        <div className="d-flex justify-content-between align-items-center my-2">
+          <div className="d-flex align-items-center gap-2 ms-3">
             <img src="/assets/images/emblem-icon.svg" alt='emblem icon' className='img-fluid' />
             <img src="/assets/images/mh-logo-icon.svg" alt='emblem icon' className='img-fluid' />
           </div>
-          <div className="brandLogo">
-            <div>Chief Minister's <span>Relief Fund</span></div>
-            <div>Government of Maharashtra</div>
+          <div className={styles.brandLogoBox}>
+            <div className={styles.brandLogo}>Chief Minister's <span className={styles.relifFund}>Relief Fund</span></div>
+            <div className={styles.mhGov}>Government of Maharashtra</div>
           </div>
-          <div className={styles.textSize + " " + "d-inline-flex align-items-center"}>
+          <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center gap-3">
+              <Button variant="primary" className="btnBlue">
+                <div className="d-flex justify-content-center align-items-center gap-2">
+                  <span>मराठी </span>
+                  <img src="/assets/images/refresh-icon.svg" className="img-fluid" />
+                </div>
+              </Button>
+              <div className="d-flex align-items-center gap-3 position-relative">
+                <Button className={styles.textSizeBtn} onClick={handleToggle}>A</Button>
+                {/* A+ and A- section */}
+                {showOptions && (
+                  <div className={styles.btnOptBox}>
+                    <button>A+</button>
+                    <button>A−</button>
+                  </div>
+                )}
+              </div>
+              <Form className="toggleSwitchBtn d-flex align-items-center">
+                <Form.Check
+                  type="switch"
+                  id="custom-switch"
+                // label="Check this switch"
+                />
+              </Form>
+            </div>
+            <div className={styles.callToBtn + " " + "d-flex align-items-center gap-2"}>
+              <img src="/assets/images/phone-call-icon.svg" className="img-fluid" />
+
+              <div className="d-flex flex-column">
+                <div classNumber={styles.tollFreeNo}>Toll Free Number</div>
+                <div className={styles.phNo}>+91- 3678-7890</div>
+              </div>
+            </div>
+          </div>
+          {/* <div className={styles.textSize + " " + "d-inline-flex align-items-center"}>
             <span>Text Size:</span>
             <a href="#" title="-A">-A</a>
             <a href="#" title="A">A</a>
             <a href="#" title="A+">A+</a>
-          </div>
-          <div className={styles.changeLanguageOpt + " " + "d-flex align-items-center"}>
+          </div> */}
+          {/* <div className={styles.changeLanguageOpt + " " + "d-flex align-items-center"}>
             <SelectFieldMan
               label="Change Language:"
               name="lang"
@@ -32,7 +72,7 @@ const BeforeLoginHeader = () => {
               disabled={false}
               dataarray={MenuItemWithKeyValueId(LANGUAGES_OPTIONS, 'langID', 'langName')}
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <Navbar collapseOnSelect expand="lg" className="py-0">
@@ -70,15 +110,15 @@ const BeforeLoginHeader = () => {
                 <Nav.Link href="#newsAndEvents" className={styles.menuLink}>RTI</Nav.Link>
                 <Nav.Link href="#getInvolved" className={styles.menuLink}>FAQ</Nav.Link>
                 <Nav.Link href="#contactUs" className={styles.menuLink}>Contact Us</Nav.Link>
-                <Nav.Link href="#contactUs" className={styles.menuLink}>Criteria and <br />Eligiblity</Nav.Link>
-                <Nav.Link href="#contactUs" className={styles.menuLink}>Application <br />Status Enquiry
+                <Nav.Link href="#criteriaAndEligibility" className={styles.menuLink}>Criteria and <br />Eligiblity</Nav.Link>
+                <Nav.Link href="#statusEnquiry" className={styles.menuLink}>Application <br />Status Enquiry
                 </Nav.Link>
               </Nav>
               <div className={styles.btnBox + " " + "d-flex ms-auto my-2 gap-3"}>
                 <a href="#" title="sitemap" target="_blank"><img src="/assets/images/sitemap-icon.svg" className="img-fluid" alt="sitemap" /></a>
                 <a href="#" title="sitemap" target="_blank"><img src="/assets/images/search-box-icon.svg" className="img-fluid" alt="sitemap" /></a>
                 <Button variant="warning" className={styles.topHeaderBtn + " " + "btnOrange"}>Donate Now</Button>
-                <Button variant="warning" className={styles.topHeaderBtn + " " + "btnOrange"}>Login</Button>
+                <Button variant="warning" className={styles.topHeaderBtn + " " + "btnOrange"}>Login <img src="/assets/images/user-icon.svg" className={styles.userIcon + " " + "img-fluid"} /></Button>
               </div>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
