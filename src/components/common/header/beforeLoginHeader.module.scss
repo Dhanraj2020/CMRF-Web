@@ -1,0 +1,258 @@
+@import "../../common/variable.scss";
+
+.beforeLoginHeader {
+  position: relative;
+
+  .topHeader {
+    min-width: 437px;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.63px;
+    text-align: left;
+    color: $text-black;
+    z-index: 1;
+
+    @media (max-width:991px) {
+      min-width: auto;
+      position: relative;
+      line-height: 40px;
+      top: 0;
+      background-color: #ddd;
+    }
+
+    @media (max-width:767px) {
+      line-height: 30px;
+    }
+
+    .changeLanguageOpt {
+      @media (max-width:767px) {
+        margin: 0 auto;
+        text-align: center;
+        justify-content: space-between !important;
+        padding: 0;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+
+        >div {
+          border-left: none;
+        }
+
+        select {
+          background-color: transparent;
+          padding: 0;
+          border: 0;
+          line-height: 1;
+          min-width: 100px;
+          font-family: "Open Sans";
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 14.63px;
+          text-align: left;
+          color: $text-black;
+        }
+      }
+    }
+
+    div {
+      // border-left: 1px solid #212121;
+      // padding: 0 0.5rem;
+
+      &:first-child {
+        border-left: none;
+
+        @media (max-width:991px) {
+          margin-left: 2rem;
+        }
+      }
+
+      // &:last-child {
+      //   padding-right: 0;
+      // }
+
+      @media (max-width:767px) {
+        flex-wrap: wrap;
+        border-left: none;
+      }
+    }
+  }
+
+  .topHeaderMenu {
+    background-color: $bg-blue;
+  }
+
+  .navbar {
+    background-color: $bg-white;
+  }
+
+  .brandLogoBox {
+    margin-left: 7.5rem;
+
+    @media(max-width:767px) {
+      margin-left: 1rem;
+    }
+
+    .brandLogo {
+      font-family: "Oswald";
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      border-left: none;
+      color: $text-orange;
+
+      @media(max-width:767px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    .mhGov {
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+
+      @media(max-width:767px) {}
+    }
+
+    .relifFund {
+      color: $text-navyBlue;
+    }
+  }
+
+  .textSizeBtn {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    background-color: $bg-lightBlue;
+    color: #201F3E;
+    padding: 5px 8.5px;
+  }
+
+  .callToBtn {
+    background-color: $bg-orange;
+    padding: 6.7px 14px 6.7px 22px;
+    border-radius: 22px 0 0 22px;
+  }
+
+  .tollFreeNo {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $text-black;
+  }
+
+  .phNo {
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: $text-black;
+  }
+
+  .btnBox {
+    .topHeaderBtn {
+      padding: 0.5rem 1rem;
+      color: $text-black;
+      min-width: max-content;
+      border: 1px solid $bg-orange;
+      border-radius: 8px;
+      height: 40px;
+    }
+  }
+
+  .btnOptBox {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    background: #F7F8FC;
+    padding: 6px 18px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    >button {
+      background-color: transparent;
+      border: none;
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1;
+    }
+  }
+
+  // .dropDownMenu {
+  .menuLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    color: $text-lightBlue;
+    padding: 7px 1rem;
+    height: 100%;
+    min-width: 82px;
+
+    @media (max-width:1024px) {
+      font-size: 10px;
+      padding: 0 15px;
+    }
+
+    @media (max-width:991px) {
+      border-left: none;
+      border-bottom: 1px solid $black;
+      padding: 8px;
+    }
+
+    &:first-child {
+      // border-left: none;
+
+      @media (max-width:991px) {
+        border-top: 1px solid $black;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $text-orange !important;
+      color: $text-black;
+    }
+
+    &.active {
+      background-color: $text-orange !important;
+      color: $text-navyBlue;
+      pointer-events: none;
+    }
+  }
+
+  // }
+
+  .textSize {
+    a {
+      color: $text-black;
+      text-decoration: none;
+      text-align: center;
+      padding: 0 4px;
+      width: 24px;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+}

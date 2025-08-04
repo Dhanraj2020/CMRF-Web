@@ -1,0 +1,24 @@
+@import "../common/variable.scss";
+
+.quickLinksSection {
+  background-color: $bg-cream;
+  overflow: hidden;
+
+  .iconBox {
+    flex: 1;
+  }
+
+  img {
+    width: 84px;
+    height: 84px;
+  }
+
+  .labelText {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: $text-black;
+  }
+}
