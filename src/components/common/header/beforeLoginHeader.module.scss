@@ -65,13 +65,11 @@
         border-left: none;
 
         @media (max-width:991px) {
-          margin-left: 2rem;
+          margin-left: 0.5rem;
         }
       }
 
-      // &:last-child {
-      //   padding-right: 0;
-      // }
+
 
       @media (max-width:767px) {
         flex-wrap: wrap;
