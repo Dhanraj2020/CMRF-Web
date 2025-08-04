@@ -15,7 +15,7 @@ const BeforeLoginHeader = () => {
     <div className={styles.beforeLoginHeader}>
       <div className={styles.topHeader + " " + "ms-auto"}>
         <div className="d-flex justify-content-between align-items-center my-2">
-          <div className="d-flex align-items-center gap-2 ms-3">
+          <div className="d-flex align-items-center gap-md-2 ms-md-3">
             <img src="/assets/images/emblem-icon.svg" alt='emblem icon' className='img-fluid' />
             <img src="/assets/images/mh-logo-icon.svg" alt='emblem icon' className='img-fluid' />
           </div>
@@ -127,8 +127,8 @@ const BeforeLoginHeader = () => {
                 </Nav.Link>
               </Nav>
               <div className={styles.btnBox + " " + "d-flex ms-auto my-2 gap-3"}>
-                <a href="#" title="sitemap" target="_blank"><img src="/assets/images/sitemap-icon.svg" className="img-fluid" alt="sitemap" /></a>
-                <a href="#" title="sitemap" target="_blank"><img src="/assets/images/search-box-icon.svg" className="img-fluid" alt="sitemap" /></a>
+                <a href="#" title="sitemap" target="_blank" className="pe-none"><img src="/assets/images/sitemap-icon.svg" className="img-fluid" alt="sitemap" /></a>
+                <a href="#" title="sitemap" target="_blank" className="pe-none"><img src="/assets/images/search-box-icon.svg" className="img-fluid" alt="sitemap" /></a>
                 <Button variant="warning" className={styles.topHeaderBtn + " " + "btnOrange pe-none"}>Donate Now</Button>
                 <Button variant="warning" className={styles.topHeaderBtn + " " + "btnOrange pe-none"}>Login <img src="/assets/images/user-icon.svg" className={styles.userIcon + " " + "img-fluid"} /></Button>
               </div>
